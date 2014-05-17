@@ -7,12 +7,15 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MyLocationManager.h"
+#import "DonationManager.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [DonationManager sharedManager];
+    //[[MyLocationManager sharedManager] startUpdatingLocation];
     return YES;
 }
 							

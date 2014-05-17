@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Donation.h"
 
 @interface DonationDetailViewController : UIViewController
 
-@property (strong, nonatomic) NSString *itemName;
+@property (strong, nonatomic) Donation *donation;
 @end

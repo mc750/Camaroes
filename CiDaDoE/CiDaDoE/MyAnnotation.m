@@ -25,9 +25,13 @@
 - (MKAnnotationView *) annotationView {
     MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"CustomAnnotation"];
     
-    
     annotationView.enabled = YES;
     annotationView.canShowCallout = YES;
+    
+    //set the right button
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    [button setImage:[UIImage imageNamed:@"disclosure_indicator"] forState:UIControlStateNormal];
+    annotationView.rightCalloutAccessoryView = button;
     
     return annotationView;
 }

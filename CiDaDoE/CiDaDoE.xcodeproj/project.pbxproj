@@ -26,6 +26,10 @@
 		FB5074C11922AAD10029853E /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5074C01922AAD10029853E /* MyAnnotation.m */; };
 		FB75D8DE1922B645000EA352 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB75D8DD1922B645000EA352 /* ListViewController.m */; };
 		FB75D8E11922BB86000EA352 /* DonationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB75D8E01922BB86000EA352 /* DonationDetailViewController.m */; };
+		FB90F8921925543A00023619 /* Donation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90F8911925543A00023619 /* Donation.m */; };
+		FB90F894192554DB00023619 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90F893192554DB00023619 /* CoreLocation.framework */; };
+		FB90F897192555E600023619 /* DonationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90F896192555E600023619 /* DonationManager.m */; };
+		FB90F89A1925641200023619 /* MyLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90F8981925641200023619 /* MyLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,13 @@
 		FB75D8DD1922B645000EA352 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		FB75D8DF1922BB86000EA352 /* DonationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonationDetailViewController.h; sourceTree = "<group>"; };
 		FB75D8E01922BB86000EA352 /* DonationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonationDetailViewController.m; sourceTree = "<group>"; };
+		FB90F8901925543A00023619 /* Donation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Donation.h; sourceTree = "<group>"; };
+		FB90F8911925543A00023619 /* Donation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Donation.m; sourceTree = "<group>"; };
+		FB90F893192554DB00023619 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FB90F895192555E600023619 /* DonationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonationManager.h; sourceTree = "<group>"; };
+		FB90F896192555E600023619 /* DonationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonationManager.m; sourceTree = "<group>"; };
+		FB90F8981925641200023619 /* MyLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocationManager.m; sourceTree = "<group>"; };
+		FB90F8991925641200023619 /* MyLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB90F894192554DB00023619 /* CoreLocation.framework in Frameworks */,
 				FB5074BB1922A8EF0029853E /* MapKit.framework in Frameworks */,
 				FB5074881922A6820029853E /* CoreGraphics.framework in Frameworks */,
 				FB50748A1922A6820029853E /* UIKit.framework in Frameworks */,
@@ -116,6 +128,7 @@
 		FB5074841922A6820029853E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB90F893192554DB00023619 /* CoreLocation.framework */,
 				FB5074BA1922A8EF0029853E /* MapKit.framework */,
 				FB5074851922A6820029853E /* Foundation.framework */,
 				FB5074871922A6820029853E /* CoreGraphics.framework */,
@@ -129,8 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				FB5074941922A6820029853E /* AppDelegate.h */,
-				FB5074971922A6820029853E /* Main.storyboard */,
 				FB5074951922A6820029853E /* AppDelegate.m */,
+				FB5074971922A6820029853E /* Main.storyboard */,
+				FB90F88F1925541200023619 /* Model */,
 				FB5074C81922B0820029853E /* View Controller */,
 				FB5074BF1922AAD10029853E /* MyAnnotation.h */,
 				FB5074C01922AAD10029853E /* MyAnnotation.m */,
@@ -182,6 +196,19 @@
 				FB75D8E01922BB86000EA352 /* DonationDetailViewController.m */,
 			);
 			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		FB90F88F1925541200023619 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB90F895192555E600023619 /* DonationManager.h */,
+				FB90F896192555E600023619 /* DonationManager.m */,
+				FB90F8991925641200023619 /* MyLocationManager.h */,
+				FB90F8981925641200023619 /* MyLocationManager.m */,
+				FB90F8901925543A00023619 /* Donation.h */,
+				FB90F8911925543A00023619 /* Donation.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,11 +309,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB50749C1922A6820029853E /* ViewController.m in Sources */,
+				FB90F8921925543A00023619 /* Donation.m in Sources */,
 				FB5074C11922AAD10029853E /* MyAnnotation.m in Sources */,
 				FB75D8DE1922B645000EA352 /* ListViewController.m in Sources */,
 				FB75D8E11922BB86000EA352 /* DonationDetailViewController.m in Sources */,
 				FB5074961922A6820029853E /* AppDelegate.m in Sources */,
+				FB90F897192555E600023619 /* DonationManager.m in Sources */,
 				FB5074921922A6820029853E /* main.m in Sources */,
+				FB90F89A1925641200023619 /* MyLocationManager.m in Sources */,
 				FB5074BE1922A96B0029853E /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,7 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.itemTitleLabel.text = self.itemName;
+    self.itemTitleLabel.text = self.donation.itemName;
+    
 }
 
 - (void)didReceiveMemoryWarning

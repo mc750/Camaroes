@@ -8,6 +8,8 @@
 
 #import "ListViewController.h"
 #import "DonationDetailViewController.h"
+#import "DonationManager.h"
+
 @interface ListViewController () <UITableViewDataSource>
 
 
@@ -30,7 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.data = @[@"Sofa", @"Geladeira", @"Agasalhos"];
+    self.data = [[DonationManager sharedManager] getAllDonations];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,10 +56,13 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    
+    Donation *donation = [self.data objectAtIndex:indexPath.row];
+
     cell.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.3f];
-    cell.textLabel.text = self.data[indexPath.row];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld m" , (indexPath.row + 1)* 100];
+    cell.textLabel.text = donation.itemName;
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld m" , (indexPath.row + 1)* 100];
+    cell.detailTextLabel.text = donation.requesterName;
+    
     return cell;
 }
 
@@ -70,7 +75,8 @@
     
     if ([vc isKindOfClass:[DonationDetailViewController class]]) {
         DonationDetailViewController *destination = (DonationDetailViewController *)vc;
-        destination.itemName = self.data[self.tableView.indexPathForSelectedRow.row];
+        Donation *selectedDonation = [self.data objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+        destination.donation = selectedDonation;
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
