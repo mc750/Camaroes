@@ -47,8 +47,13 @@ static DonationManager *sharedManagerConfig = nil;
     [self.donationArray addObject:newDonation];
 }
 
--(NSMutableArray *) getAllDonations {
-    return self.donationArray;
+-(NSArray *) getAllDonations {
+    return [self.donationArray sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        Donation *donation1 = (Donation *)obj1;
+        Donation *donation2 = (Donation *)obj2;
+        
+        return [donation1 getDistanceValueFromCurrentLocationToDropLocation] - [donation2 getDistanceValueFromCurrentLocationToDropLocation];
+    }];
 }
 
 #pragma mark - Hardcoded Donations

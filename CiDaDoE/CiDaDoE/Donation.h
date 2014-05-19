@@ -28,4 +28,7 @@ typedef enum : NSUInteger
 @property (nonatomic) DonationCategory itemCategory;
 @property (nonatomic) BOOL wasCompleted;
 
+-(NSString *) getDistanceStringFromCurrentLocationToDropLocation;
+-(CGFloat ) getDistanceValueFromCurrentLocationToDropLocation;
+
 @end
