@@ -61,16 +61,6 @@
     [self.mapView setRegion:region animated:YES];
 }
 
-- (IBAction)touch:(UILongPressGestureRecognizer *)sender {
-    if (sender.state == UIGestureRecognizerStateEnded) {
-        CGPoint touchPoint = [sender locationInView:self.mapView];
-        
-        CLLocationCoordinate2D coords = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
-        NSLog(@"%.1f %.1f",coords.latitude, coords.longitude);
-        MyAnnotation  *annotation = [[MyAnnotation alloc] initWithTitle:@"HUE" andCoordinate:coords];
-        [self.mapView addAnnotation:annotation];
-    }
-}
 
 -(void) didUpdateLocation:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
