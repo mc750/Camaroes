@@ -1,0 +1,264 @@
+{
+    "assets": [
+        {
+            "asset": "CiDaDoE/en.lproj/InfoPlist.strings", 
+            "target": "en.lproj/InfoPlist.strings"
+        }, 
+        {
+            "asset": "CiDaDoE/Images.xcassets/disclosure_indicator.imageset/disclosure_indicator.png", 
+            "target": "disclosure_indicator.png"
+        }, 
+        {
+            "asset": "CiDaDoE/Images.xcassets/sofa.imageset/sofa_bed_1.png", 
+            "target": "sofa.png"
+        }
+    ], 
+    "config": {
+        "APPLICATION_FULL_NAME": "CiDaDoE", 
+        "APPLICATION_IDENTIFIER": "lf.CiDaDoE", 
+        "APPLICATION_NAME": "CiDaDoE", 
+        "FEATURES": [
+            "opengles2", 
+            "portrait"
+        ], 
+        "ICU_CONFIG": "normal", 
+        "LONG_VERSION": "1.0", 
+        "SHORT_VERSION": "1.0", 
+        "TEMPLATE_VALUES": {
+            "EXECUTABLE_NAME": "CiDaDoE", 
+            "PRODUCT_NAME": "CiDaDoE"
+        }
+    }, 
+    "defines": {
+        "NS_BLOCK_ASSERTIONS": 1, 
+        "__IPHONE_OS_VERSION_MIN_REQUIRED": 70000
+    }, 
+    "deps": [
+        "UIKit", 
+        "CoreLocation", 
+        "MapKit", 
+        "CoreGraphics", 
+        "UIKit", 
+        "Foundation"
+    ], 
+    "flags": [
+        "-fobjc-arc", 
+        "-fasm-blocks", 
+        {
+            "flag": "-std=gnu99", 
+            "not_type": "c++"
+        }, 
+        {
+            "flag": "-fgnu-keywords", 
+            "not_type": "c++"
+        }, 
+        "-fno-asm", 
+        "-fpascal-strings", 
+        "-Wempty-body", 
+        "-Wshorten-64-to-32", 
+        "-Wno-deprecated-declarations", 
+        "-Wswitch", 
+        "-Wparentheses", 
+        "-Wformat", 
+        "-Wunused-function", 
+        "-Wunused-value", 
+        "-Wunused-variable", 
+        {
+            "flag": "-Winvalid-offsetof", 
+            "type": "c++"
+        }, 
+        {
+            "flag": "-Wprotocol", 
+            "type": "objc"
+        }, 
+        {
+            "flag": "-Wundeclared-selector", 
+            "type": "objc"
+        }
+    ], 
+    "header_paths": [
+        {
+            "header_path": "CiDaDoE-generated-files.hmap", 
+            "hmap": {}, 
+            "type": "iquote"
+        }, 
+        {
+            "header_path": "CiDaDoE-own-target-headers.hmap", 
+            "hmap": {}, 
+            "type": "I"
+        }, 
+        {
+            "header_path": "CiDaDoE-all-target-headers.hmap", 
+            "hmap": {}, 
+            "type": "I"
+        }, 
+        {
+            "header_path": "CiDaDoE-project-headers.hmap", 
+            "hmap": {
+                "AppDelegate.h": {
+                    "key": "AppDelegate.h", 
+                    "prefix": "CiDaDoE/", 
+                    "suffix": "AppDelegate.h"
+                }, 
+                "CiDaDoE-Prefix.pch": {
+                    "key": "CiDaDoE-Prefix.pch", 
+                    "prefix": "CiDaDoE/", 
+                    "suffix": "CiDaDoE-Prefix.pch"
+                }, 
+                "Donation.h": {
+                    "key": "Donation.h", 
+                    "prefix": "CiDaDoE/", 
+                    "suffix": "Donation.h"
+                }, 
+                "DonationDetailViewController.h": {
+                    "key": "DonationDetailViewController.h", 
+                    "prefix": "CiDaDoE/", 
+                    "suffix": "DonationDetailViewController.h"
+                }, 
+                "DonationManager.h": {
+                    "key": "DonationManager.h", 
+                    "prefix": "CiDaDoE/", 
+                    "suffix": "DonationManager.h"
+                }, 
+                "ListViewController.h": {
+                    "key": "ListViewController.h", 
+                    "prefix": "CiDaDoE/", 
+                    "suffix": "ListViewController.h"
+                }, 
+                "MapViewController.h": {
+                    "key": "MapViewController.h", 
+                    "prefix": "CiDaDoE/", 
+                    "suffix": "MapViewController.h"
+                }, 
+                "MyAnnotation.h": {
+                    "key": "MyAnnotation.h", 
+                    "prefix": "CiDaDoE/", 
+                    "suffix": "MyAnnotation.h"
+                }, 
+                "MyLocationManager.h": {
+                    "key": "MyLocationManager.h", 
+                    "prefix": "CiDaDoE/", 
+                    "suffix": "MyLocationManager.h"
+                }, 
+                "ViewController.h": {
+                    "key": "ViewController.h", 
+                    "prefix": "CiDaDoE/", 
+                    "suffix": "ViewController.h"
+                }
+            }, 
+            "type": "iquote"
+        }, 
+        {
+            "header_path": "/var/folders/8d/_dlytpjd7rvcsfpfdf_n335w0000gn/T/tmplDDkv8/BUILT_PRODUCTS_DIR/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/var/folders/8d/_dlytpjd7rvcsfpfdf_n335w0000gn/T/tmplDDkv8/DERIVED_FILE_DIR/armv7", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/var/folders/8d/_dlytpjd7rvcsfpfdf_n335w0000gn/T/tmplDDkv8/DERIVED_FILE_DIR", 
+            "type": "I"
+        }
+    ], 
+    "infoplists": [
+        "./CiDaDoE/CiDaDoE-Info.plist"
+    ], 
+    "java_libs": [], 
+    "java_res_dirs": [], 
+    "java_sourcepaths": [], 
+    "java_sources": [], 
+    "libs": [], 
+    "link_flags": [], 
+    "modules": [], 
+    "pchs": [
+        "./CiDaDoE/CiDaDoE-Prefix.pch"
+    ], 
+    "sources": [
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "CiDaDoE/AppDelegate.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "CiDaDoE/Donation.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "CiDaDoE/DonationDetailViewController.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "CiDaDoE/DonationManager.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "CiDaDoE/ListViewController.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "CiDaDoE/MapViewController.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "CiDaDoE/MyAnnotation.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "CiDaDoE/MyLocationManager.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "CiDaDoE/ViewController.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "CiDaDoE/main.m"
+        }
+    ], 
+    "storyboards": [
+        {
+            "storyboard": "CiDaDoE/Base.lproj/Main.storyboard", 
+            "target": null
+        }
+    ], 
+    "type": "app", 
+    "version": "3", 
+    "xcdatamodels": [], 
+    "xcode_project": "CiDaDoE.xcodeproj", 
+    "xibs": []
+}

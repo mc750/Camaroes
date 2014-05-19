@@ -7,10 +7,17 @@
 //
 
 #import "DonationDetailViewController.h"
+#import "Donation.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface DonationDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *distanceTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *itemTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *deliveryMethodTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contactTitleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 
 @end
 
@@ -29,8 +36,22 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.itemTitleLabel.text = self.donation.itemName;
     
+#warning CIRI MUST REFACTOR!!!
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:-22.8159717 longitude:-47.072263];
+    
+    self.distanceTitleLabel.text = [NSString stringWithFormat:@"Distância: %.1fkm", [location distanceFromLocation:self.donation.dropLocation]/1000];
+    self.itemTitleLabel.text = [NSString stringWithFormat:@"Item: %@", self.donation.itemName];
+    
+#warning CIRI MUST ADD \/
+    //self.deliveryMethodTitleLabel.text = [NSString stringWithFormat:@"Método de Entrega: %@", self.donation.deliveryMethod];
+    
+    self.contactTitleLabel.text = [NSString stringWithFormat:@"Contato: %@", self.donation.requesterName];
+    
+#warning SET IMAGE
+    self.imageView.image = [UIImage imageNamed:@"sofa"];
+    self.imageView.layer.cornerRadius = self.imageView.frame.size.width/2;
+    self.imageView.layer.masksToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning

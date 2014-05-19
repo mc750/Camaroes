@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-typedef enum : NSUInteger {
+typedef enum : NSUInteger
+{
     Others,
     Clothing,
     HouseItems,

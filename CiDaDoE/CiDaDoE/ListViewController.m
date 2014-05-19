@@ -61,7 +61,12 @@
     cell.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.3f];
     cell.textLabel.text = donation.itemName;
     //cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld m" , (indexPath.row + 1)* 100];
-    cell.detailTextLabel.text = donation.requesterName;
+    
+    
+#warning CIRI MUST REFACTOR!!!
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:-22.8159717 longitude:-47.072263];
+    
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (%.0fm)", donation.requesterName, [location distanceFromLocation:donation.dropLocation]];
     
     return cell;
 }
