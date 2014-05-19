@@ -10,4 +10,15 @@
 
 @implementation Donation
 
+-(NSString *)getDistanceStringFromCurrentLocationToDropLocation {
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:-22.8159717 longitude:-47.072263];
+    CGFloat distance = [location distanceFromLocation:self.dropLocation];
+    return [NSString stringWithFormat:@"%.1f km" ,distance/1000 ];
+}
+
+-(CGFloat )getDistanceValueFromCurrentLocationToDropLocation {
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:-22.8159717 longitude:-47.072263];
+    CGFloat distance = [location distanceFromLocation:self.dropLocation];
+    return distance;
+}
 @end
