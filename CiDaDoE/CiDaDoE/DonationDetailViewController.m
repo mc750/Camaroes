@@ -37,19 +37,37 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-#warning CIRI MUST REFACTOR!!!
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:-22.8159717 longitude:-47.072263];
-    
-    self.distanceTitleLabel.text = [NSString stringWithFormat:@"Distância: %.1fkm", [location distanceFromLocation:self.donation.dropLocation]/1000];
-    self.itemTitleLabel.text = [NSString stringWithFormat:@"Item: %@", self.donation.itemName];
+    self.distanceTitleLabel.text = [self.donation getDistanceStringFromCurrentLocationToDropLocation];
+    self.itemTitleLabel.text = self.donation.itemName;
     
 #warning CIRI MUST ADD \/
-    //self.deliveryMethodTitleLabel.text = [NSString stringWithFormat:@"Método de Entrega: %@", self.donation.deliveryMethod];
+    //self.deliveryMethodTitleLabel.text =  self.donation.deliveryMethod;
+    self.deliveryMethodTitleLabel.text = @"Retirada";
     
-    self.contactTitleLabel.text = [NSString stringWithFormat:@"Contato: %@", self.donation.requesterName];
     
-#warning SET IMAGE
-    self.imageView.image = [UIImage imageNamed:@"sofa"];
+    
+    self.contactTitleLabel.text = self.donation.requesterName;
+    
+    UIImage *image;
+    switch (self.donation.itemCategory)
+    {
+        case Others:
+            image = [UIImage imageNamed:@"others"];
+            break;
+        case Clothing:
+            image = [UIImage imageNamed:@"clothing"];
+            break;
+        case HouseItems:
+            image = [UIImage imageNamed:@"houseItems"];
+            break;
+        case Food:
+            image = [UIImage imageNamed:@"food"];
+            break;
+        default:
+            break;
+    }
+    
+    self.imageView.image = image;
     self.imageView.layer.cornerRadius = self.imageView.frame.size.width/2;
     self.imageView.layer.masksToBounds = YES;
 }

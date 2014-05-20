@@ -80,7 +80,7 @@ static DonationManager *sharedManagerConfig = nil;
         
         CLLocation *newLocation = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
         
-        [self addNewDonationWithItemName:itemName itemCategory:Others andItemDescription:@"Descrição do pedido pedido pedido pedido." requestedBy:requesterName withDropLocation:newLocation];
+        [self addNewDonationWithItemName:itemName itemCategory:HouseItems andItemDescription:@"Descrição do pedido pedido pedido pedido." requestedBy:requesterName withDropLocation:newLocation];
     }
 }
 @end
