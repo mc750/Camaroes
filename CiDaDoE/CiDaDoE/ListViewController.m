@@ -10,10 +10,12 @@
 #import "DonationDetailViewController.h"
 #import "DonationManager.h"
 
-@interface ListViewController () <UITableViewDataSource>
+@interface ListViewController () <UITableViewDataSource, UISearchDisplayDelegate>
 
 
 @property (strong, nonatomic) NSArray *data;
+@property (nonatomic, strong) NSMutableArray *searchResults;
+
 @end
 
 @implementation ListViewController
@@ -33,6 +35,8 @@
     // Do any additional setup after loading the view.
     
     self.data = [[DonationManager sharedManager] getAllDonations];
+    self.searchResults = [NSMutableArray arrayWithCapacity:[self.data count]];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,7 +48,14 @@
 #pragma mark - UITableViewDataSource
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.data.count;
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        return [self.searchResults count];
+    }
+    else
+    {
+        return [self.data count];
+    } 
 }
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -52,14 +63,20 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    //It took me almost an hour to find out but if you use tableView instead of self.tableView the app WILL CRASH when searching
     
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    Donation *donation = [self.data objectAtIndex:indexPath.row];
-
+    
+    
     cell.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.3f];
+
+    NSArray *array = (tableView == self.searchDisplayController.searchResultsTableView) ? self.searchResults : self.data;
+    
+    Donation *donation = [array objectAtIndex:indexPath.row];
+    
     cell.textLabel.text = donation.itemName;
     
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (%@) ", donation.requesterName, [donation getDistanceStringFromCurrentLocationToDropLocation] ];
@@ -82,6 +99,26 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
+
+#pragma mark - UISearchDislpayDelegate
+
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    [self.searchResults removeAllObjects];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"itemName contains[c] %@", searchText];
+    
+    self.searchResults = [NSMutableArray arrayWithArray: [self.data filteredArrayUsingPredicate:resultPredicate]];
+
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    
+    return YES;
+}
+
+
 
 
 @end

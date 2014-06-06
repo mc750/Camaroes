@@ -89,12 +89,9 @@
     }
 }
 
-
-
-- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view
-calloutAccessoryControlTapped:(UIControl *)control
+-(void)calloutBubbleTapped:(MKAnnotationView *)view
 {
-    NSLog(@"accessory button tapped for annotation %@", view.annotation);
+    NSLog(@"annotation tapped %@", view.annotation);
     if ([view.annotation isKindOfClass:[MyAnnotation class]]) {
         MyAnnotation *annotation = view.annotation;
         [self performSegueWithIdentifier:@"SegueFromMapToDetail" sender:annotation.donation];

@@ -29,9 +29,10 @@
     annotationView.canShowCallout = YES;
     
     //set the right button
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-    [button setImage:[UIImage imageNamed:@"disclosure_indicator"] forState:UIControlStateNormal];
-    annotationView.rightCalloutAccessoryView = button;
+    UIImageView *disclosure = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"disclosure_indicator"]];
+    annotationView.rightCalloutAccessoryView = disclosure;
+    
+    
     
     return annotationView;
 }
