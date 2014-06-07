@@ -10,4 +10,6 @@
 
 @interface ListViewController : UITableViewController
 
+@property (nonatomic) BOOL shouldDelete;
+
 @end

@@ -158,6 +158,9 @@
                                 <state key="normal" title="Doar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="donate:" destination="2MI-S5-Mqi" eventType="touchUpInside" id="7Vz-qi-VOH"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

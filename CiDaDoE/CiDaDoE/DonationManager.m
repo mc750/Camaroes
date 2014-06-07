@@ -56,6 +56,11 @@ static DonationManager *sharedManagerConfig = nil;
     }];
 }
 
+-(void)removeDonation:(Donation *)donation
+{
+    [self.donationArray removeObject:donation];
+}
+
 #pragma mark - Hardcoded Donations
 -(void) createFakeData: (NSNotification *) notification {
     //NSDictionary *userInfo = notification.userInfo;

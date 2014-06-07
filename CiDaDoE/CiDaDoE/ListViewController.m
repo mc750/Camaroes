@@ -13,9 +13,9 @@
 @interface ListViewController () <UITableViewDataSource, UISearchDisplayDelegate>
 
 
-@property (strong, nonatomic) NSArray *data;
+@property (strong, nonatomic) NSMutableArray *data;
 @property (nonatomic, strong) NSMutableArray *searchResults;
-
+@property (nonatomic, strong) NSIndexPath *deletedIndexPath;
 @end
 
 @implementation ListViewController
@@ -34,9 +34,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.data = [[DonationManager sharedManager] getAllDonations];
+    self.data = [NSMutableArray arrayWithArray:[[DonationManager sharedManager] getAllDonations]];
     self.searchResults = [NSMutableArray arrayWithCapacity:[self.data count]];
 
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (self.shouldDelete)
+    {
+        [self.data removeObjectAtIndex:self.deletedIndexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[self.deletedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,6 +106,7 @@
         DonationDetailViewController *destination = (DonationDetailViewController *)vc;
         Donation *selectedDonation = [self.data objectAtIndex:self.tableView.indexPathForSelectedRow.row];
         destination.donation = selectedDonation;
+        self.deletedIndexPath = self.tableView.indexPathForSelectedRow;
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.

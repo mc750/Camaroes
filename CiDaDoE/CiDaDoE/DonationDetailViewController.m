@@ -8,9 +8,11 @@
 
 #import "DonationDetailViewController.h"
 #import "Donation.h"
+#import "DonationManager.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ListViewController.h"
 
-@interface DonationDetailViewController ()
+@interface DonationDetailViewController () <UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *distanceTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *itemTitleLabel;
@@ -81,8 +83,6 @@
 }
 
 /*
-#pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -90,5 +90,34 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)donate:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Desejo mesmo doar?" message:@"Uma pessoa ficará muito feliz!!" delegate:self cancelButtonTitle:@"Não, obrigado" otherButtonTitles:@"Siiim!!", nil];
+    [alert show];
+}
+
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if ([alertView.title isEqualToString:@"Desejo mesmo doar?"] && buttonIndex == 1)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Yaay" message:@"Sua doação deixou uma pessoa muito feliz!!" delegate:self cancelButtonTitle:@"😁" otherButtonTitles: nil];
+        [alert show];
+    }
+    else if ([alertView.title isEqualToString:@"Yaay"])
+    {
+        [[DonationManager sharedManager] removeDonation:self.donation];
+        UITabBarController *destinationViewController = [self.navigationController.viewControllers[self.navigationController.viewControllers.count-2] isKindOfClass:[UITabBarController class]] ? self.navigationController.viewControllers[self.navigationController.viewControllers.count-2] : nil;
+        if ([destinationViewController.selectedViewController isMemberOfClass:[ListViewController class]])
+        {
+            ListViewController *vc = (ListViewController*)destinationViewController.selectedViewController;
+            vc.shouldDelete = YES;
+        }
+
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
 
 @end

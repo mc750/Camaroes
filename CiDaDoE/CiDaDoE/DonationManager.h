@@ -16,6 +16,7 @@
 -(void) addNewDonationWithItemName: (NSString *) itemName itemCategory: (DonationCategory ) category andItemDescription: (NSString *)description
                        requestedBy: (NSString *) requester withDropLocation : (CLLocation *) location;
 
+-(void) removeDonation: (Donation*) donation;
 -(NSMutableArray *) getAllDonations;
 
 @end
