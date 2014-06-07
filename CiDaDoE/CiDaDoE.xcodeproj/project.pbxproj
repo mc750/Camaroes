@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C588EC9C1943ABE300D77473 /* DonationRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C588EC9B1943ABE300D77473 /* DonationRequestViewController.m */; };
 		FB5074861922A6820029853E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5074851922A6820029853E /* Foundation.framework */; };
 		FB5074881922A6820029853E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5074871922A6820029853E /* CoreGraphics.framework */; };
 		FB50748A1922A6820029853E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5074891922A6820029853E /* UIKit.framework */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C588EC9A1943ABE300D77473 /* DonationRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonationRequestViewController.h; sourceTree = "<group>"; };
+		C588EC9B1943ABE300D77473 /* DonationRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonationRequestViewController.m; sourceTree = "<group>"; };
 		FB5074821922A6820029853E /* CiDaDoE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiDaDoE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB5074851922A6820029853E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB5074871922A6820029853E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -106,6 +109,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C588EC991943AB8100D77473 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB5074971922A6820029853E /* Main.storyboard */,
+				FB5074BF1922AAD10029853E /* MyAnnotation.h */,
+				FB5074C01922AAD10029853E /* MyAnnotation.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		FB5074791922A6820029853E = {
 			isa = PBXGroup;
 			children = (
@@ -141,13 +154,9 @@
 		FB50748B1922A6820029853E /* CiDaDoE */ = {
 			isa = PBXGroup;
 			children = (
-				FB5074941922A6820029853E /* AppDelegate.h */,
-				FB5074951922A6820029853E /* AppDelegate.m */,
-				FB5074971922A6820029853E /* Main.storyboard */,
 				FB90F88F1925541200023619 /* Model */,
-				FB5074C81922B0820029853E /* View Controller */,
-				FB5074BF1922AAD10029853E /* MyAnnotation.h */,
-				FB5074C01922AAD10029853E /* MyAnnotation.m */,
+				C588EC991943AB8100D77473 /* View */,
+				FB5074C81922B0820029853E /* Controller */,
 				FB50749D1922A6820029853E /* Images.xcassets */,
 				FB50748C1922A6820029853E /* Supporting Files */,
 			);
@@ -157,6 +166,8 @@
 		FB50748C1922A6820029853E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB5074941922A6820029853E /* AppDelegate.h */,
+				FB5074951922A6820029853E /* AppDelegate.m */,
 				FB50748D1922A6820029853E /* CiDaDoE-Info.plist */,
 				FB50748E1922A6820029853E /* InfoPlist.strings */,
 				FB5074911922A6820029853E /* main.m */,
@@ -183,7 +194,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FB5074C81922B0820029853E /* View Controller */ = {
+		FB5074C81922B0820029853E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				FB50749A1922A6820029853E /* ViewController.h */,
@@ -194,8 +205,10 @@
 				FB75D8DD1922B645000EA352 /* ListViewController.m */,
 				FB75D8DF1922BB86000EA352 /* DonationDetailViewController.h */,
 				FB75D8E01922BB86000EA352 /* DonationDetailViewController.m */,
+				C588EC9A1943ABE300D77473 /* DonationRequestViewController.h */,
+				C588EC9B1943ABE300D77473 /* DonationRequestViewController.m */,
 			);
-			name = "View Controller";
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		FB90F88F1925541200023619 /* Model */ = {
@@ -309,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB50749C1922A6820029853E /* ViewController.m in Sources */,
+				C588EC9C1943ABE300D77473 /* DonationRequestViewController.m in Sources */,
 				FB90F8921925543A00023619 /* Donation.m in Sources */,
 				FB5074C11922AAD10029853E /* MyAnnotation.m in Sources */,
 				FB75D8DE1922B645000EA352 /* ListViewController.m in Sources */,

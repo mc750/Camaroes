@@ -19,6 +19,8 @@
 @property (strong, nonatomic) UIPopoverController *popover;
 
 @property (strong, nonatomic) Donation *selectedDonation;
+@property (strong, nonatomic) MKAnnotationView *annotationView;
+
 @end
 
 @implementation MapViewController
@@ -52,7 +54,7 @@
     NSMutableArray *donations = [[DonationManager sharedManager] getAllDonations];
 
     for (Donation *donation in donations) {
-        MyAnnotation *annotation = [[MyAnnotation alloc] initWithTitle:donation.itemName andCoordinate:donation.dropLocation.coordinate];
+        MyAnnotation *annotation = [[MyAnnotation alloc] initWithTitle:donation.itemName coordinate:donation.dropLocation.coordinate andMapViewController:self];
         annotation.donation = donation;
         [self.mapView addAnnotation:annotation];
     }
@@ -98,6 +100,13 @@
     }
 }
 
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedCallout:)];
+    [view addGestureRecognizer:tap];
+    self.annotationView = view;
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -112,6 +121,11 @@
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+}
+
+- (void) tappedCallout: (id) sender
+{
+    [self calloutBubbleTapped:self.annotationView];
 }
 
 @end

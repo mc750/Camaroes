@@ -7,17 +7,19 @@
 //
 
 #import "MyAnnotation.h"
+#import "MapViewController.h"
 
 @implementation MyAnnotation
 
 @synthesize title, subtitle, coordinate;
 
-- (id)initWithTitle:(NSString *)ttl andCoordinate:(CLLocationCoordinate2D)c2d {
+- (id)initWithTitle:(NSString *)ttl coordinate:(CLLocationCoordinate2D)c2d andMapViewController:(MapViewController *)mapViewController{
 	self = [super init];
     
     if(self) {
         title = ttl;
         coordinate = c2d;
+        self.mapViewController = mapViewController;
     }
 	return self;
 }
@@ -32,10 +34,7 @@
     UIImageView *disclosure = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"disclosure_indicator"]];
     annotationView.rightCalloutAccessoryView = disclosure;
     
-    
-    
     return annotationView;
 }
-
 
 @end

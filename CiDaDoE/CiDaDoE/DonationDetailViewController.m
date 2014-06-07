@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *deliveryMethodTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contactTitleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
 
 @end
@@ -39,6 +40,7 @@
     
     self.distanceTitleLabel.text = [self.donation getDistanceStringFromCurrentLocationToDropLocation];
     self.itemTitleLabel.text = self.donation.itemName;
+    self.descriptionTextView.text = self.donation.description;
     
 #warning CIRI MUST ADD \/
     //self.deliveryMethodTitleLabel.text =  self.donation.deliveryMethod;

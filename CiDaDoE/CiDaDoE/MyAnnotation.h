@@ -10,6 +10,8 @@
 #import "Donation.h"
 #import <MapKit/MapKit.h>
 
+@class MapViewController;
+
 @interface MyAnnotation : NSObject <MKAnnotation> {
     CLLocationCoordinate2D coordinate;
     NSString *title;
@@ -19,10 +21,11 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *subtitle;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, strong) MapViewController *mapViewController;
 
 @property (strong, nonatomic) Donation *donation;
 
--(id)initWithTitle:(NSString *)ttl andCoordinate:(CLLocationCoordinate2D)c2d;
+-(id)initWithTitle:(NSString *)ttl coordinate:(CLLocationCoordinate2D)c2d andMapViewController: (MapViewController*) mapViewController;
 
 - (MKAnnotationView *) annotationView;
 

@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>BE8FAE57-1F84-4479-821B-2714343A1870</string>
+	<string>0CEF6728-8E24-4D5C-8CAE-ABA32CB070C1</string>
 	<key>IDESourceControlProjectName</key>
 	<string>CiDaDoE</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>64B1118F-022A-4EA5-AFF8-A0BAF0E63CE7</key>
-		<string>ssh://github.com/LuizFernandoCirigliano/CiDaDoE.git</string>
+		<key>630F3998-FBB0-4033-ACA6-A78D59813B40</key>
+		<string>ssh://github.com/mc750/Camaroes.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>CiDaDoE/CiDaDoE.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>64B1118F-022A-4EA5-AFF8-A0BAF0E63CE7</key>
+		<key>630F3998-FBB0-4033-ACA6-A78D59813B40</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/LuizFernandoCirigliano/CiDaDoE.git</string>
+	<string>ssh://github.com/mc750/Camaroes.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>64B1118F-022A-4EA5-AFF8-A0BAF0E63CE7</string>
+	<string>630F3998-FBB0-4033-ACA6-A78D59813B40</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>64B1118F-022A-4EA5-AFF8-A0BAF0E63CE7</string>
+			<string>630F3998-FBB0-4033-ACA6-A78D59813B40</string>
 			<key>IDESourceControlWCCName</key>
-			<string>CiDaDoE</string>
+			<string>Camaroes</string>
 		</dict>
 	</array>
 </dict>

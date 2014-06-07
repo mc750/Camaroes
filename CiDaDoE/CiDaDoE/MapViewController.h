@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MKAnnotationView;
 
 @interface MapViewController : UIViewController
+
+-(void)calloutBubbleTapped:(MKAnnotationView *)view;
 
 @end
