@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C588EC9C1943ABE300D77473 /* DonationRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C588EC9B1943ABE300D77473 /* DonationRequestViewController.m */; };
+		C59AC6391944EFD800BDB274 /* gift.gif in Resources */ = {isa = PBXBuildFile; fileRef = C59AC6381944EFD800BDB274 /* gift.gif */; };
 		FB5074861922A6820029853E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5074851922A6820029853E /* Foundation.framework */; };
 		FB5074881922A6820029853E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5074871922A6820029853E /* CoreGraphics.framework */; };
 		FB50748A1922A6820029853E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5074891922A6820029853E /* UIKit.framework */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		C588EC9A1943ABE300D77473 /* DonationRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonationRequestViewController.h; sourceTree = "<group>"; };
 		C588EC9B1943ABE300D77473 /* DonationRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonationRequestViewController.m; sourceTree = "<group>"; };
+		C59AC6381944EFD800BDB274 /* gift.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gift.gif; path = ../../../../../Downloads/gift.gif; sourceTree = "<group>"; };
 		FB5074821922A6820029853E /* CiDaDoE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiDaDoE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB5074851922A6820029853E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB5074871922A6820029853E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				FB5074971922A6820029853E /* Main.storyboard */,
+				C59AC6381944EFD800BDB274 /* gift.gif */,
 				FB5074BF1922AAD10029853E /* MyAnnotation.h */,
 				FB5074C01922AAD10029853E /* MyAnnotation.m */,
 			);
@@ -302,6 +305,7 @@
 			files = (
 				FB50749E1922A6820029853E /* Images.xcassets in Resources */,
 				FB5074901922A6820029853E /* InfoPlist.strings in Resources */,
+				C59AC6391944EFD800BDB274 /* gift.gif in Resources */,
 				FB5074991922A6820029853E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
