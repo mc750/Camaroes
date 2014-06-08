@@ -15,7 +15,7 @@
 {
     // Override point for customization after application launch.
     [DonationManager sharedManager];
-    //[[MyLocationManager sharedManager] startUpdatingLocation];
+    [[MyLocationManager sharedManager] startUpdatingLocation];
     return YES;
 }
 							

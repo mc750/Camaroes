@@ -47,7 +47,7 @@
         [self.tableView beginUpdates];
         [self.data removeObjectAtIndex:self.deletedIndexPath.row];
         [self.tableView deleteRowsAtIndexPaths:@[self.deletedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [self.tableView endUpdates];
+        [self.tableView endUpdates];    	
     }
 }
 

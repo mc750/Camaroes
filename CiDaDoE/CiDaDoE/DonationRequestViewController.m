@@ -58,7 +58,8 @@
     {
         #warning Ciri must add dynamic location
         //Latitude e Longitude de Campinas
-        CLLocation *location = [[CLLocation alloc] initWithLatitude:-22.8159717 longitude:-47.072263];
+        CLLocationCoordinate2D coordinate = [[MyLocationManager sharedManager]previousCoordinate];
+        CLLocation *location = [[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
         
         [[DonationManager sharedManager] addNewDonationWithItemName:self.itemName.text itemCategory:Others andItemDescription:self.itemDescription.text requestedBy:self.requesterName.text withDropLocation:location];
         
