@@ -141,7 +141,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.98948334380000003" green="1" blue="0.99861405150000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.87257704380000001" green="1" blue="0.97396680049999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Info" id="8Ia-RU-fxC">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="GkZ-kc-2l9">
@@ -370,8 +370,8 @@
                                 <rect key="frame" x="0.0" y="25" width="320" height="480"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Off-1S-hxi">
-                                <rect key="frame" x="20" y="98" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="-59" y="208" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Ver Pedidos">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -380,17 +380,35 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcP-C2-Hia">
-                                <rect key="frame" x="20" y="157" width="280" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="95" y="199" width="280" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Cadastrar Pedido">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GS0-TB-ZeD" kind="modal" id="EvT-5j-zzv"/>
+                                    <segue destination="GS0-TB-ZeD" kind="push" id="NE5-XF-M4W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7H-tj-hmr">
+                                <rect key="frame" x="174" y="82" width="123" height="120"/>
+                                <state key="normal" image="edit1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GS0-TB-ZeD" kind="push" id="rNe-qo-o0s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rks-dB-nnB">
+                                <rect key="frame" x="20" y="82" width="123" height="120"/>
+                                <state key="normal" image="lupa1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="l8P-ol-QMH" kind="push" id="DcL-gn-E1v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGj-HM-bfV">
-                                <rect key="frame" x="20" y="246" width="280" height="33"/>
+                                <rect key="frame" x="20" y="257" width="280" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Ajuda">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -400,7 +418,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBu-M7-Q9Y">
-                                <rect key="frame" x="20" y="297" width="280" height="33"/>
+                                <rect key="frame" x="20" y="298" width="280" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Sobre">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -462,7 +480,7 @@
                         <viewControllerLayoutGuide type="bottom" id="PdI-Lh-3M7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TqV-dD-57R">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nJR-Ag-9M3">
@@ -559,8 +577,10 @@
     <resources>
         <image name="cidade" width="640" height="960"/>
         <image name="city" width="640" height="960"/>
+        <image name="edit1.png" width="120" height="120"/>
         <image name="gift.gif" width="366" height="336"/>
         <image name="list" width="30" height="30"/>
+        <image name="lupa1.png" width="120" height="120"/>
         <image name="map" width="30" height="30"/>
         <image name="people" width="456" height="115"/>
     </resources>
@@ -570,6 +590,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="rNe-qo-o0s"/>
+        <segue reference="fao-sD-kWZ"/>
         <segue reference="sw4-fW-gmb"/>
     </inferredMetricsTieBreakers>
 </document>
