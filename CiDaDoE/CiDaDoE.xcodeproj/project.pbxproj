@@ -8,21 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C588EC9C1943ABE300D77473 /* DonationRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C588EC9B1943ABE300D77473 /* DonationRequestViewController.m */; };
-		C599DE201945309000CB2C24 /* icons.png in Resources */ = {isa = PBXBuildFile; fileRef = C599DE1F1945309000CB2C24 /* icons.png */; };
-		C599DE22194530AB00CB2C24 /* icons - Copia.png in Resources */ = {isa = PBXBuildFile; fileRef = C599DE21194530AB00CB2C24 /* icons - Copia.png */; };
-		C599DE2D194530B100CB2C24 /* .localized in Resources */ = {isa = PBXBuildFile; fileRef = C599DE24194530B100CB2C24 /* .localized */; };
-		C599DE2E194530B100CB2C24 /* About Downloads.lpdf in Resources */ = {isa = PBXBuildFile; fileRef = C599DE25194530B100CB2C24 /* About Downloads.lpdf */; };
-		C599DE2F194530B100CB2C24 /* CALENDÁRIO 1º. semestre 2014 - LA211 - atual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C599DE26194530B100CB2C24 /* CALENDÁRIO 1º. semestre 2014 - LA211 - atual.pdf */; };
-		C599DE30194530B100CB2C24 /* Desktop.rar in Resources */ = {isa = PBXBuildFile; fileRef = C599DE28194530B100CB2C24 /* Desktop.rar */; };
-		C599DE31194530B100CB2C24 /* gift.gif in Resources */ = {isa = PBXBuildFile; fileRef = C599DE29194530B100CB2C24 /* gift.gif */; };
-		C599DE32194530B100CB2C24 /* icons - Copia.png in Resources */ = {isa = PBXBuildFile; fileRef = C599DE2A194530B100CB2C24 /* icons - Copia.png */; };
-		C599DE33194530B100CB2C24 /* icons.png in Resources */ = {isa = PBXBuildFile; fileRef = C599DE2B194530B100CB2C24 /* icons.png */; };
-		C599DE34194530B100CB2C24 /* people.rar in Resources */ = {isa = PBXBuildFile; fileRef = C599DE2C194530B100CB2C24 /* people.rar */; };
-		C599DE39194533BF00CB2C24 /* edit1.png in Resources */ = {isa = PBXBuildFile; fileRef = C599DE35194533BF00CB2C24 /* edit1.png */; };
-		C599DE3A194533BF00CB2C24 /* edit2.png in Resources */ = {isa = PBXBuildFile; fileRef = C599DE36194533BF00CB2C24 /* edit2.png */; };
-		C599DE3B194533BF00CB2C24 /* lupa1.png in Resources */ = {isa = PBXBuildFile; fileRef = C599DE37194533BF00CB2C24 /* lupa1.png */; };
-		C599DE3C194533BF00CB2C24 /* lupa2.png in Resources */ = {isa = PBXBuildFile; fileRef = C599DE38194533BF00CB2C24 /* lupa2.png */; };
-		C59AC6391944EFD800BDB274 /* gift.gif in Resources */ = {isa = PBXBuildFile; fileRef = C59AC6381944EFD800BDB274 /* gift.gif */; };
 		FB5074861922A6820029853E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5074851922A6820029853E /* Foundation.framework */; };
 		FB5074881922A6820029853E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5074871922A6820029853E /* CoreGraphics.framework */; };
 		FB50748A1922A6820029853E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5074891922A6820029853E /* UIKit.framework */; };
@@ -61,21 +46,6 @@
 /* Begin PBXFileReference section */
 		C588EC9A1943ABE300D77473 /* DonationRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonationRequestViewController.h; sourceTree = "<group>"; };
 		C588EC9B1943ABE300D77473 /* DonationRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonationRequestViewController.m; sourceTree = "<group>"; };
-		C599DE1F1945309000CB2C24 /* icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icons.png; path = ../../../../../Downloads/icons.png; sourceTree = "<group>"; };
-		C599DE21194530AB00CB2C24 /* icons - Copia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons - Copia.png"; path = "../../../../../Downloads/icons - Copia.png"; sourceTree = "<group>"; };
-		C599DE24194530B100CB2C24 /* .localized */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .localized; sourceTree = "<group>"; };
-		C599DE25194530B100CB2C24 /* About Downloads.lpdf */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "About Downloads.lpdf"; sourceTree = "<group>"; };
-		C599DE26194530B100CB2C24 /* CALENDÁRIO 1º. semestre 2014 - LA211 - atual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CALENDÁRIO 1º. semestre 2014 - LA211 - atual.pdf"; sourceTree = "<group>"; };
-		C599DE28194530B100CB2C24 /* Desktop.rar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Desktop.rar; sourceTree = "<group>"; };
-		C599DE29194530B100CB2C24 /* gift.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gift.gif; sourceTree = "<group>"; };
-		C599DE2A194530B100CB2C24 /* icons - Copia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons - Copia.png"; sourceTree = "<group>"; };
-		C599DE2B194530B100CB2C24 /* icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons.png; sourceTree = "<group>"; };
-		C599DE2C194530B100CB2C24 /* people.rar */ = {isa = PBXFileReference; lastKnownFileType = file; path = people.rar; sourceTree = "<group>"; };
-		C599DE35194533BF00CB2C24 /* edit1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edit1.png; path = "../../../../../Downloads/Desktop-2/edit1.png"; sourceTree = "<group>"; };
-		C599DE36194533BF00CB2C24 /* edit2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edit2.png; path = "../../../../../Downloads/Desktop-2/edit2.png"; sourceTree = "<group>"; };
-		C599DE37194533BF00CB2C24 /* lupa1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lupa1.png; path = "../../../../../Downloads/Desktop-2/lupa1.png"; sourceTree = "<group>"; };
-		C599DE38194533BF00CB2C24 /* lupa2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lupa2.png; path = "../../../../../Downloads/Desktop-2/lupa2.png"; sourceTree = "<group>"; };
-		C59AC6381944EFD800BDB274 /* gift.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gift.gif; path = ../../../../../Downloads/gift.gif; sourceTree = "<group>"; };
 		FB5074821922A6820029853E /* CiDaDoE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiDaDoE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB5074851922A6820029853E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB5074871922A6820029853E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -143,42 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				FB5074971922A6820029853E /* Main.storyboard */,
-				C599DE35194533BF00CB2C24 /* edit1.png */,
-				C599DE36194533BF00CB2C24 /* edit2.png */,
-				C599DE37194533BF00CB2C24 /* lupa1.png */,
-				C599DE38194533BF00CB2C24 /* lupa2.png */,
-				C599DE23194530B100CB2C24 /* Downloads */,
-				C599DE21194530AB00CB2C24 /* icons - Copia.png */,
-				C599DE1F1945309000CB2C24 /* icons.png */,
-				C59AC6381944EFD800BDB274 /* gift.gif */,
 				FB5074BF1922AAD10029853E /* MyAnnotation.h */,
 				FB5074C01922AAD10029853E /* MyAnnotation.m */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		C599DE23194530B100CB2C24 /* Downloads */ = {
-			isa = PBXGroup;
-			children = (
-				C599DE24194530B100CB2C24 /* .localized */,
-				C599DE25194530B100CB2C24 /* About Downloads.lpdf */,
-				C599DE26194530B100CB2C24 /* CALENDÁRIO 1º. semestre 2014 - LA211 - atual.pdf */,
-				C599DE27194530B100CB2C24 /* Desktop */,
-				C599DE28194530B100CB2C24 /* Desktop.rar */,
-				C599DE29194530B100CB2C24 /* gift.gif */,
-				C599DE2A194530B100CB2C24 /* icons - Copia.png */,
-				C599DE2B194530B100CB2C24 /* icons.png */,
-				C599DE2C194530B100CB2C24 /* people.rar */,
-			);
-			name = Downloads;
-			path = ../../../../../Downloads;
-			sourceTree = "<group>";
-		};
-		C599DE27194530B100CB2C24 /* Desktop */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Desktop;
 			sourceTree = "<group>";
 		};
 		FB5074791922A6820029853E = {
@@ -263,8 +201,8 @@
 				FB50749B1922A6820029853E /* ViewController.m */,
 				FB5074BC1922A96B0029853E /* MapViewController.h */,
 				FB5074BD1922A96B0029853E /* MapViewController.m */,
-				FB75D8DC1922B645000EA352 /* ListViewController.h */,
 				FB75D8DD1922B645000EA352 /* ListViewController.m */,
+				FB75D8DC1922B645000EA352 /* ListViewController.h */,
 				FB75D8DF1922BB86000EA352 /* DonationDetailViewController.h */,
 				FB75D8E01922BB86000EA352 /* DonationDetailViewController.m */,
 				C588EC9A1943ABE300D77473 /* DonationRequestViewController.h */,
@@ -363,22 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB50749E1922A6820029853E /* Images.xcassets in Resources */,
-				C599DE31194530B100CB2C24 /* gift.gif in Resources */,
-				C599DE34194530B100CB2C24 /* people.rar in Resources */,
-				C599DE2F194530B100CB2C24 /* CALENDÁRIO 1º. semestre 2014 - LA211 - atual.pdf in Resources */,
-				C599DE3C194533BF00CB2C24 /* lupa2.png in Resources */,
-				C599DE3A194533BF00CB2C24 /* edit2.png in Resources */,
-				C599DE30194530B100CB2C24 /* Desktop.rar in Resources */,
-				C599DE33194530B100CB2C24 /* icons.png in Resources */,
-				C599DE201945309000CB2C24 /* icons.png in Resources */,
-				C599DE2D194530B100CB2C24 /* .localized in Resources */,
 				FB5074901922A6820029853E /* InfoPlist.strings in Resources */,
-				C599DE22194530AB00CB2C24 /* icons - Copia.png in Resources */,
-				C59AC6391944EFD800BDB274 /* gift.gif in Resources */,
-				C599DE39194533BF00CB2C24 /* edit1.png in Resources */,
-				C599DE3B194533BF00CB2C24 /* lupa1.png in Resources */,
-				C599DE32194530B100CB2C24 /* icons - Copia.png in Resources */,
-				C599DE2E194530B100CB2C24 /* About Downloads.lpdf in Resources */,
 				FB5074991922A6820029853E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

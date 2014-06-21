@@ -93,7 +93,7 @@
 
 - (IBAction)donate:(id)sender
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Desejo mesmo doar?" message:@"Uma pessoa ficará muito feliz!!" delegate:self cancelButtonTitle:@"Não, obrigado" otherButtonTitles:@"Siiim!!", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Desejo mesmo doar?" message:@"Uma pessoa ficará muito feliz!!\tEntre em contato (XX) 1234-1234" delegate:self cancelButtonTitle:@"Não, obrigado" otherButtonTitles:@"Siiim!!", nil];
     [alert show];
 }
 

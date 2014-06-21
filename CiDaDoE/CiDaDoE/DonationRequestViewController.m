@@ -57,13 +57,14 @@
     if ((![self.itemName.text isEqualToString:@""]) && (![self.itemDescription.text isEqualToString:@""]) && (![self.requesterName.text isEqualToString:@""]))
     {
         #warning Ciri must add dynamic location
+        CLLocation *location = [[CLLocation alloc] initWithLatitude:-22.8159717 longitude:-47.072263];
         //Latitude e Longitude de Campinas
-        CLLocationCoordinate2D coordinate = [[MyLocationManager sharedManager]previousCoordinate];
-        CLLocation *location = [[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
+        //CLLocationCoordinate2D coordinate = [[MyLocationManager sharedManager]previousCoordinate];
+        //CLLocation *location = [[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
         
         [[DonationManager sharedManager] addNewDonationWithItemName:self.itemName.text itemCategory:Others andItemDescription:self.itemDescription.text requestedBy:self.requesterName.text withDropLocation:location];
         
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self.navigationController popViewControllerAnimated:YES];
     }
     else
     {
