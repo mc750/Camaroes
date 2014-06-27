@@ -11,6 +11,8 @@
 #import "DonationManager.h"
 #import <QuartzCore/QuartzCore.h>
 #import "ListViewController.h"
+#import <MapKit/MapKit.h>
+#import "MyAnnotation.h"
 
 @interface DonationDetailViewController () <UIAlertViewDelegate>
 
@@ -21,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
@@ -74,6 +77,13 @@
     self.imageView.image = image;
     self.imageView.layer.cornerRadius = self.imageView.frame.size.width/2;
     self.imageView.layer.masksToBounds = YES;
+    
+    MyAnnotation *annotation = [[MyAnnotation alloc] initWithTitle:self.donation.itemName coordinate:self.donation.dropLocation.coordinate andMapViewController:self];
+    annotation.donation = self.donation;
+    [self.mapView addAnnotation:annotation];
+
+    MKCoordinateRegion region = MKCoordinateRegionMake(self.donation.dropLocation.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+    [self.mapView setRegion:region animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
